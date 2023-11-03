@@ -63,39 +63,36 @@ documentation:
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:  
-    player1_up button
-    player1_down button
-    player1_left button
-    player1_right button
-    
-    player2_up button
-    player2_down button
-    player2_left button
-    player2_right button
+    - player1_up button
+    - player1_down button
+    - player1_left button
+    - player1_right button
+    - player2_up button
+    - player2_down button
+    - player2_left button
+    - player2_right button
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
-    out0 = horz0 (lsd)
-    out1 = horz1 binary encoded position in the x direction
-    out2 = horz2
-    out3 = horz3
-    out4 = horz4
-    out5 = points player1 pulses when player 1 gets a point
-    out6 = points player2
-    out7 = vertical pixels shift register out 
+    - horz0 (lsd)
+    - horz1 binary encoded position in the x direction
+    - horz2
+    - horz3
+    - horz4
+    - points player1 pulses when player 1 gets a point
+    - points player2
+    - vertical pixels shift register out 
 
 # A description of what the bidirectional I/O pins do (e.g. I2C SDA, I2C SCL, etc)
   bidirectional:
-    D0 = enable vertical pixels shift register
-    (when D0 low, shift register ff mirror vertical pixels,
-    when D0 high, then the shifting can start)
-    D1 = vertical pixels shift register clock
-    D2 = not used, pulled low internally
-    D3 = not used, pulled low internally
-    D4 = multiplexer clock - multiplexes between padle1, padle2, and ball, as the led matrix can only display one at a time
-    D5 = not used, pulled low internally
-    D6 = not used, pulled low internally
-    D7 = not used, pulled low internally
-    D5 = not used, pulled low internally
+    - enable vertical pixels shift register (when D0 low, shift register ff mirror vertical pixels,when D0 high, then the shifting can start)
+    - vertical pixels shift register clock
+    - not used, pulled low internally
+    - not used, pulled low internally
+    - multiplexer clock - multiplexes between padle1, padle2, and ball, as the led matrix can only display one at a time
+    - not used, pulled low internally
+    - not used, pulled low internally
+    - not used, pulled low internally
+    - not used, pulled low internally
 
 
 # The following fields are optional

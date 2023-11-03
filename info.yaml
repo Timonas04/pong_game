@@ -63,17 +63,15 @@ documentation:
 
 # A description of what the inputs do (e.g. red button, SPI CLK, SPI MOSI, etc).
   inputs:  
-    in_clk = clk
-    in_reset = reset (active low)
-    in0 = player1_up button
-    in1 = player1_down button
-    in2 = player1_left button
-    in3 = player1_right button
+    player1_up button
+    player1_down button
+    player1_left button
+    player1_right button
     
-    in4 = player2_up button
-    in5 = player2_down button
-    in6 = player2_left button
-    in7 = player2_right button
+    player2_up button
+    player2_down button
+    player2_left button
+    player2_right button
 # A description of what the outputs do (e.g. status LED, SPI MISO, etc)
   outputs:
     out0 = horz0 (lsd)
